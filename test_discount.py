@@ -14,6 +14,8 @@ class TestDiscount(unittest.TestCase):
         with self.assertRaises(ValueError):
             apply_discount(100, 150)
 
-
+    def test_negative_price(self):
+        with self.assertRaises(ValueError):
+            apply_discount(-100, 10)
 if __name__ == "__main__":
     unittest.main()
